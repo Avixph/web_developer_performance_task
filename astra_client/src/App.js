@@ -1,10 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Route } from "react-router-dom";
+import Main from "./screens/Main";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Route exact path="/" component={Main} />
     </div>
   );
 }

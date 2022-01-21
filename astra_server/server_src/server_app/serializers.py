@@ -6,5 +6,5 @@ from .models import AstraNote
 class AstraNoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = AstraNote
-        fields = ('note_id', "title", "description",
+        fields = ('id', "title", "description",
                   "complete", "createdAt", "updatedAt")

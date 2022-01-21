@@ -58,7 +58,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
-    os.environ.get('SERVER_DOMAIN'),
+    os.environ.get('CLIENT_DOMAIN'),
+    os.environ.get('SERVER_DOMAIN')
 )
 
 ROOT_URLCONF = 'server_src.urls'

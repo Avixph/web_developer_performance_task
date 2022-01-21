@@ -61,7 +61,7 @@ def note_detail(request, pk):
 
 @api_view(['GET'])
 def note_completed_list(request):
-    notes = AstraNote.objects.filter(published=True)
+    notes = AstraNote.objects.filter(complete=True)
 # get all notes marked as complete
     if request.method == 'GET':
         notes_serializer = AstraNoteSerializer(notes, many=True)

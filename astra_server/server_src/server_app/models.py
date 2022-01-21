@@ -6,7 +6,8 @@ from django.db import models
 
 
 class AstraNote(models.Model):
-    note_id = models.UUIDField(default=uuid.uuid4, unique=True)
+    id = models.UUIDField(primary_key=True,
+                          default=uuid.uuid4, editable=False, unique=True)
     title = models.CharField(max_length=70, blank=False,
                              default='')
     description = models.CharField(max_length=200, blank=False, default='')
